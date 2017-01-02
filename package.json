@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node-watch": "gulp runtime-node-watch",
+    "web-watch": "gulp runtime-web-watch"
   },
   "repository": {
     "type": "git",
@@ -17,12 +19,8 @@
   },
   "homepage": "https://github.com/joergwasmeier/fabalous-core-servertest#readme",
   "devDependencies": {
-    "@fabalous/core": "^0.2.37",
-    "@fabalous/runtime-node": "0.0.2",
-    "@fabalous/runtime-web": "^0.1.57",
-    "express": "^4.14.0"
-  },
-  "dependencies": {
-    "react-addons-shallow-compare": "^15.4.1"
+    "@fabalous/core": "*",
+    "@fabalous/runtime-node": "*",
+    "@fabalous/runtime-web": "*"
   }
 }

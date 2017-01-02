@@ -6,7 +6,7 @@ import TestCase1View from "../../view/TestCase1View";
 
 export default class Test1WebCommand extends FabaWebCommand<IData> {
     async execute(event: Test1Event) {
-        event.view = React.createElement(TestCase1View, {});
+        event.view = React.createElement(TestCase1View, {result:this.data.serverResult});
         event.callBack();
     }
 }

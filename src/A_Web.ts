@@ -4,7 +4,6 @@ import {IData} from "./A_Server";
 import FabaImmutableStore from "@fabalous/core/FabaImmutableStore";
 import Layout from "./testCase1/view/Layout";
 import Routes from "./Routes";
-import FabaCore from "@fabalous/core/FabaCore";
 import FabaApiConnection from "@fabalous/runtime-web/transport/FabaApiConnection";
 
 class A_Web extends FabaRuntimeWeb{
@@ -18,5 +17,8 @@ class A_Web extends FabaRuntimeWeb{
     }
 }
 
-var store:FabaImmutableStore<IData> = new FabaImmutableStore({});
-new A_Web(store);
+const h:IData = {
+    serverResult:"test"
+};
+
+new A_Web(new FabaImmutableStore<IData>(h));

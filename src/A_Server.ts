@@ -7,32 +7,15 @@ import FabaNodeRuntime from "@fabalous/runtime-node/FabaNodeRuntime";
 class A_Server extends FabaNodeRuntime {
     constructor(data:FabaStore<IData>){
         super(data);
-        console.log("start");
-
+        require('source-map-support').install();
+        console.log("Start");
         FabaCore.addMediator(TestCase1NodeMediator);
-
-        new Test1Event().dispatch().then(()=>{
-                console.log("fin d");
-            }
-        );
-
-        this.asyncTest();
-    }
-
-
-    async asyncTest(){
-        let test1 = await new Test1Event().dispatch();
-        console.log("test1: " + test1);
-        let test2 = await new Test1Event().dispatch();
-        console.log("test2: " +test2);
-        let test3 = await new Test1Event().dispatch();
-        console.log("test3: " +test3);
     }
 }
 
 export interface IData {
-
+    serverResult:string;
 }
 
-var test:FabaStore<IData> = new FabaStore({});
+var test:FabaStore<IData> = new FabaStore({serverResult:""});
 new A_Server(test);

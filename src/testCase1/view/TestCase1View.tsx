@@ -7,7 +7,7 @@ import Test1Event from "../event/Test1Event";
  * Created by creativecode on 02.01.17.
  */
 
-export default class TestCase1View extends FabaWebBaseComponent<any>{
+export default class TestCase1View extends FabaWebBaseComponent<{result:string}>{
     constructor(props){
         super(props);
     }
@@ -19,6 +19,8 @@ export default class TestCase1View extends FabaWebBaseComponent<any>{
     render(): ReactElement<any> {
         return <div>
            <button onClick={this.triggerTestClick}>Send Event to Server</button>
+            <br/>
+            <p>{this.props.result}</p>
         </div>
     }
 }

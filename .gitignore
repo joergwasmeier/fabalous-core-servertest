@@ -49,3 +49,5 @@ node_modules/
 package.json
 typings/
 .awcache
+dist
+npm-debug.log

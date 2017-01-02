@@ -13,7 +13,6 @@ export default class Test1Command extends FabaWebCommand<IData> {
     }
     
     async result(event:Test1Event){
-        console.log("result");
-        console.log(event);
+        this.setStore("serverResult", JSON.stringify(event));
     }
 }
