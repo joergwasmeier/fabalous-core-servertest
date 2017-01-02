@@ -1,11 +1,8 @@
-import FabaMediator from "@fabalous/core/FabaMediator";
 import Test1Event from "../event/Test1Event";
 import Test1NodeCommand from "../command/server/Test1NodeCommand";
-/**
- * Created by creativecode on 30.12.16.
- */
+import {FabaNodeMediator} from "@fabalous/runtime-node/FabaNodeMediator";
 
-export default class TestCase1NodeMediator extends FabaMediator{
+export default class TestCase1NodeMediator extends FabaNodeMediator{
     registerCommands(): void {
         this.addCommand(Test1Event, Test1NodeCommand);
     }
